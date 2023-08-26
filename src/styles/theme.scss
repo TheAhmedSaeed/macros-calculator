@@ -1,0 +1,16 @@
+@import "~@angular/material/theming";
+
+// Define the custom palettes using the given colors
+$macros-primary: mat-palette($mat-green, 500, 400, 600);
+$macros-accent: mat-palette($mat-orange, A200, A100, A400);
+$macros-warn: mat-palette($mat-red);
+
+// Create the theme using the palettes
+$macros-theme: mat-light-theme($macros-primary, $macros-accent, $macros-warn);
+
+@include angular-material-theme($macros-theme);
+
+// Additional styles
+body {
+	background-color: #f5f5f5;
+}
